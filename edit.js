@@ -1,10 +1,14 @@
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease;
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const hiddenElements = document.querySelectorAll(".hidden");
 
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        entry.target.classList.remove("hidden");
+      }
+    });
+  });
+
+  hiddenElements.forEach((el) => observer.observe(el));
+});
