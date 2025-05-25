@@ -1,120 +1,29 @@
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.hh1')
-    var position = element.getBoundingClientRect()
+const revealOnScroll = (selector) => {
+    const element = document.querySelector(selector);
+    if (!element) return;
 
+    const position = element.getBoundingClientRect();
     if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
+        element.classList.add('visible');
     } else {
-        element.classList.remove('visible')
+        element.classList.remove('visible');
     }
-})
+};
 
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.hh21')
-    var position = element.getBoundingClientRect()
+const elementsToReveal = [
+    '.hh1',
+    '.hh21',
+    '.hh22',
+    '.hh3',
+    '.abt',
+    '.about-img img',
+    '.service',
+    '.know',
+    '#news',
+    '.ac',
+    '.fig'
+];
 
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.hh22')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.hh3')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.abt')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.about-img img')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.service')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.know')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('#news')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.ac')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
-
-window.addEventListener('scroll', function () {
-    var element = this.document.querySelector('.fig')
-    var position = element.getBoundingClientRect()
-
-    if (position.top < window.innerHeight && position.bottom >= 0) {
-        element.classList.add('visible')
-    } else {
-        element.classList.remove('visible')
-    }
-})
+window.addEventListener('scroll', () => {
+    elementsToReveal.forEach(selector => revealOnScroll(selector));
+});
