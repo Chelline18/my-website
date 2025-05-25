@@ -1,90 +1,142 @@
-/* Reset & dasar */
+/* ===== Reset & Base Styles ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #A9C2D5;
-  color: #000;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #A9C2D5;
+    color: #000000;
+    line-height: 1.6;
 }
 
-/* Animasi muncul */
+/* ===== Hidden Animation ===== */
 .hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
 }
 
 .show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Header */
+/* ===== Top Navigation ===== */
 .top {
-  background-color: #7DAFC4;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #A9C2D5;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-.top p {
-  font-size: 24px;
-  font-weight: bold;
+.top .link a {
+    margin-left: 1.2rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: 2px solid black;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
-.link a {
-  margin-left: 20px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
+.top .link a:hover {
+    background-color: black;
+    color: white;
 }
 
-/* Logo dan judul */
+/* ===== Header / Logo ===== */
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ccc;
+}
+
 .logo img {
-  width: 120px;
-  height: auto;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
 }
 
 .sim h1 {
-  font-size: 32px;
-  margin-top: 10px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 0.5rem 0 2rem;
+    color: #000000;
+    letter-spacing: 1px;
 }
 
-/* Section style */
-.about, .service, .accessibility, .know, #news, aside, figure {
-  margin: 40px 20px;
-  background-color: #B3D2E3;
-  padding: 20px;
-  border-radius: 8px;
+/* ===== Navigation Buttons ===== */
+.kid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
 }
 
-/* Gambar */
+.kid div a {
+    background-color: white;
+    color: black;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: 2px solid black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.kid div a:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ===== About, Services, etc. ===== */
+.about,
+.service,
+article,
+aside,
+figure,
+footer {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 .about-img img,
 .accessibility img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
-  background-color: #7DAFC4;
-  padding: 20px;
-  text-align: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
 }
 
-footer a {
-  color: #000;
-  text-decoration: none;
-}
-
-/* Tombol/link hover */
-.link a:hover {
-  text-decoration: underline;
+a {
+    color: inherit;
 }
