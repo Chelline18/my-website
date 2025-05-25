@@ -1,10 +1,119 @@
+/* ========== RESET & DASAR ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* ========== TOP NAVIGATION ========== */
+.top {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* ========== HEADER ========== */
+header {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #222;
+  color: white;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.sim h1 {
+  font-size: 1.8rem;
+}
+
+/* ========== NAV LINKS ========== */
+.kid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.kid div a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+
+/* ========== MAIN SECTION ========== */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+
+section, article, aside, figure {
+  margin-bottom: 50px;
+}
+
+.about-img img,
+.accessibility img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ========== ANIMASI ========== */
 .hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
 }
 
 .show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .logo img {
+    width: 90px;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top .link a {
+    display: block;
+    margin: 5px 0;
+  }
 }
