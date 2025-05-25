@@ -1,16 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const hiddenElements = document.querySelectorAll(".hidden");
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-                entry.target.classList.remove("hidden");
-            }
-        });
-    }, {
-        threshold: 0.1,
-    });
-
-    hiddenElements.forEach(el => observer.observe(el));
-});
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
