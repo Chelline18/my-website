@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("edit.js loaded");
-
     const hiddenElements = document.querySelectorAll(".hidden");
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
-            } else {
-                entry.target.classList.remove("show");
+                entry.target.classList.remove("hidden");
             }
         });
+    }, {
+        threshold: 0.1,
     });
 
-    hiddenElements.forEach((el) => observer.observe(el));
+    hiddenElements.forEach(el => observer.observe(el));
 });
