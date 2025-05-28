@@ -19,6 +19,20 @@ body {
     transition: all 1s ease;
 }
 
+.hhidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ccc;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .show {
     opacity: 1;
     transform: translateY(0);
@@ -119,7 +133,7 @@ footer {
     margin: 2rem auto;
     max-width: 900px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-img img,
